@@ -3,11 +3,21 @@ external_package_dirs: []
 model_metadata: {}
 model_name: arible-qr-code
 python_version: py311
-requirements: []
+requirements:
+  - diffusers
+  - transformers
+  - torch
+  - pillow
+  - accelerate
+  - safetensors
+  - xformers
+  - qrcode
+  - pyzbar
 resources:
-  accelerator: null
-  cpu: '1'
+  accelerator: T4
+  cpu: "1"
   memory: 2Gi
-  use_gpu: false
+  use_gpu: true
 secrets: {}
-system_packages: []
+system_packages:
+  - libzbar0
