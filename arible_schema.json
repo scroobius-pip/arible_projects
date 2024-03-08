@@ -9,7 +9,7 @@
             "area": false,
             "options": {
                 "min": 1,
-                "max": 10,
+                "max": 5,
                 "items": [
                     {
                         "title": "neo_fauvism",

@@ -14,9 +14,9 @@ requirements:
   - qrcode
   - pyzbar
 resources:
-  accelerator: T4
-  cpu: "1"
-  memory: 2Gi
+  accelerator: A10G
+  cpu: "4"
+  memory: 4Gi
   use_gpu: true
 secrets: {}
 system_packages:
