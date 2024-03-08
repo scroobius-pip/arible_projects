@@ -123,21 +123,21 @@ def image_to_base64(image: Image.Image):
 
 
 def generate_image_with_conditioning_scale(**inputs):
-    prompt = inputs["prompt"]
+    styles = inputs["styles"]
     pair = inputs["pair"]
     pipe = inputs["pipe"]
     qr_image = inputs["qr_image"]
     generator = inputs["generator"]
 
     images = pipe(
-        prompt=[prompt] * 1,
-        negative_prompt=[""] * 1,
+        prompt=styles,
+        negative_prompt=[""] * len(styles),
         width=WIDTH,
         height=HEIGHT,
         guidance_scale=7.0,
         generator=generator,
         num_inference_steps=25,
-        num_images_per_prompt=3,
+        num_images_per_prompt=2,
         controlnet_conditioning_scale=pair,
         image=[qr_image] * 2,
     ).images
@@ -146,7 +146,7 @@ def generate_image_with_conditioning_scale(**inputs):
 
 
 def generate_image(pipe, inputs):
-    prompt = inputs["prompt"]
+    styles = inputs["styles"]
     content = inputs["content"]
     art_scale = inputs["art_scale"]
     # pipe = inputs["pipe"]
@@ -160,7 +160,7 @@ def generate_image(pipe, inputs):
             generator = torch.Generator()
             pair = select_weight_pair(art_scale)
             return generate_image_with_conditioning_scale(
-                prompt=prompt,
+                styles=styles,
                 pair=pair,
                 pipe=pipe,
                 qr_image=qr_image,

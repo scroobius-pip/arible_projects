@@ -3,13 +3,159 @@
     "description": "Example arible app qr code",
     "inputs": [
         {
-            "name": "prompt",
+            "name": "styles",
             "type": "text",
-            "description": "Describe the style of the QR code",
+            "description": "Select up to 10 styles for the QR code",
             "area": false,
             "options": {
                 "min": 1,
-                "max": 100
+                "max": 10,
+                "items": [
+                    {
+                        "title": "neo_fauvism",
+                        "value": "portrait of person, close-up a painting of a face with a pink background, a character portrait by petros afshar, behance contest winner, neo-fauvism, behance hd, digital illustration, poster art",
+                        "description": "neo_fauvism",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-neo_fauvism.png"
+                    },
+                    {
+                        "title": "cyberpunk",
+                        "value": "a vivid cyberpunk dark fantasy art piece featuring intricate details, heavily influenced by the works of geof darrow, mark ryden, and wayne barlowe.",
+                        "description": "cyberpunk",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-cyberpunk.png"
+                    },
+                    {
+                        "title": "urban_fashion",
+                        "value": "bold colors and polka dots in an oversized fit. high-fashion photoshoot by renowned photograps david lachapelle, petra collins, erwin blumenfeld.",
+                        "description": "urban_fashion",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-urban_fashion.png"
+                    },
+                    {
+                        "title": "floral_summer",
+                        "value": "intricate floral summer decoration. skillful blend of dot matrix, seurat and signac style - gaze exudes strength and determination, cape is made of delicate leaves and interlocking small flowers in vivid hues. in the air is dazzling gold dust from enchanted staff.",
+                        "description": "floral_summer",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-floral_summer.png"
+                    },
+                    {
+                        "title": "tinkerbell_fantasy",
+                        "value": "dot matrix, seurat, signac, frazetta, and brom-inspired decor. pattern made of intricate leaves and interlocking small flowers bringing splashes of vibrant color.",
+                        "description": "tinkerbell_fantasy",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-tinkerbell_fantasy.png"
+                    },
+                    {
+                        "title": "floral_acrylic",
+                        "value": "poster, flower, cruel, thick acrylic illustration by kawacy, by john singer sargent, masterpiece",
+                        "description": "floral_acrylic",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-floral_acrylic.png"
+                    },
+                    {
+                        "title": "botanical_academia",
+                        "value": "beautiful botanical academia, fashionable karrueche style with lisa frank touches, pot of gold and shamrock holographic prints. metallic brilliance with a rainbow style in the style of james jean and alberto seveso.",
+                        "description": "botanical_academia",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-botanical_academia.png"
+                    },
+                    {
+                        "title": "shamrock",
+                        "value": "shamrock with colorful shamrock wings sitting on a grapevine branch. vibrant colors, intricate details and whimsical fantasy art design. by boris valleyo and tom bagshaw.",
+                        "description": "shamrock",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-shamrock.png"
+                    },
+                    {
+                        "title": "savage",
+                        "value": "vivid watercolor sketch painting, inspired by laurie greasley, studio ghibli, akira toriyama, james gilleard and genshin impact. trending fanbox artwork on pixiv and artstation, with an acrylic palette knife painting technique in vibrant colors and 4k resolution.",
+                        "description": "savage",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-savage.png"
+                    },
+                    {
+                        "title": "rougarou",
+                        "value": "portrait of person, close-up fantasy rougarou , wearing asian-style garments and a bipedal wolf silhouette. adorned with realistic fur and intricate details, t middle className citizen evokes a captivating dnd character art with hd16k quality",
+                        "description": "rougarou",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-rougarou.png"
+                    },
+                    {
+                        "title": "sunset",
+                        "value": "illustration of a pink sunset on a new zealand beach road. magical pastel colors draped in the sky, dreamy atmospe, and rotic vibes. soft lighting, exquisite details and peaceful composition.",
+                        "description": "sunset",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-sunset.png"
+                    },
+                    {
+                        "title": "action",
+                        "value": "portrait of person, close-up mysterious character on an epic adventure at a hot summer beach, with vibrant colors and intense action. character design inspired by \"nancy drew: the big lie\" by anthony del col and wert dell'edera illustration. exotic scenery of zanzibar, tanzania in 2022.",
+                        "description": "action",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-action.png"
+                    },
+                    {
+                        "title": "myconid_mushroom",
+                        "value": "close-up handsome illustration of a myconid mushroom , inspired by michael whelan, shaun tan and roger dean artwork. eteal and mysterious visuals, surreal vibes and dreamy mood, vibrant colors and contrast, unique composition and intricate details.",
+                        "description": "myconid_mushroom",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-myconid_mushroom.png"
+                    },
+                    {
+                        "title": "moroccan_art",
+                        "value": "portrait of person, close-up majestic environment art of a person as a god in vibrant hues of yellow, coral pink and moroccan tile. afrofuturism style blend of daniel f. gerhartz, keita takahashi, lucy hardie and tsutomu nihei with crisp highlights and delicate shadows",
+                        "description": "moroccan_art",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-moroccan_art.png"
+                    },
+                    {
+                        "title": "minimal_cartoon",
+                        "value": "portrait of young person, close-up cheerful cartoon illustration of a young person surrounded by abstract pattern, with teal soft colors and yellow blobs, 2d clean vector line, flat colors, art by atey ghailan and watercolor. sopticated and minimalistic yet whimsical artwork.",
+                        "description": "minimal_cartoon",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-minimal_cartoon.png"
+                    },
+                    {
+                        "title": "afremov",
+                        "value": "portrait of person, close-up striking portrait of a handsome with tousled hair, in the style of leonid afremov. realistic emotional oil painting with impasto brush strokes, obscured facial features with an evocative expression, high contrast and vivid saturated colors, and a slight glow.",
+                        "description": "afremov",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-afremov.png"
+                    },
+                    {
+                        "title": "alien_tidepool",
+                        "value": "alien tidepool of shimmering water. dramatic lighting in the style of jingna zhang and james jean, featuring stunning photography with vivid colors and details.",
+                        "description": "alien_tidepool",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-alien_tidepool.png"
+                    },
+                    {
+                        "title": "floral_facemask",
+                        "value": "portrait of person, close-up close up of a enigmatic person in a latex facemask, enigmatic look obfuscated by vivid petals. mesmerizing oil painting by simon stalenhag and robert rauschenberg with delicate details and mesmerizing vibrancy.",
+                        "description": "floral_facemask",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-floral_facemask.png"
+                    },
+                    {
+                        "title": "floral_facemask_2",
+                        "value": "portrait of person, close-up close-up of a girl's face in a latex facemask, obscured by lush and exotic flowers. a blend of oil painting techniques by simon stalenhag and robert rauschenberg, with an enigmatic and abstract feel.",
+                        "description": "floral_facemask_2",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-floral_facemask_2.png"
+                    },
+                    {
+                        "title": "greek_port",
+                        "value": " close-up striking landscape of a wondrous port city, fantasy architecture with grandiose art of war ships in the harbor. epic night time scene with brilliant coloring, greek-style fantasy elements, and an amazing array of details.",
+                        "description": "greek_port",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-greek_port.png"
+                    },
+                    {
+                        "title": "holographic",
+                        "value": "close-up vibrant holographic crafted from a dot matrix, with impeccable definition, hyperrealistic detail, cinematic composition and volumetric lighting. ultra high resolution 8k image and lifelike gradients for a mesmerizing look.",
+                        "description": "holographic",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-holographic.png"
+                    },
+                    {
+                        "title": "illuminated_portrait",
+                        "value": "portrait of person, close-up extreme closeup of a person with emerald green eyes and long pastel blue crystalline diamond-textured hair, illuminated by a soft beam of sunlight. inspired by the work of kuvshinov ilya and crafted with vivid colors, surreal detail, and otherworldly atmosphere.",
+                        "description": "illuminated_portrait",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-illuminated_portrait.png"
+                    },
+                    {
+                        "title": "iridescent_portrait",
+                        "value": "close-up subsurface scattering with glittering, shimmering, luminous, iridescent, opalescent, glowing, sparkling gleaming scintillating kaleidoscopic shining crystalline diamond-hair in shamrock wind. by wlop and artgerm with strong glow.",
+                        "description": "iridescent_portrait",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-iridescent_portrait.png"
+                    },
+                    {
+                        "title": "minecraft",
+                        "value": "minecraft, 3d, isometric view, landscape",
+                        "description": "minecraft",
+                        "previewImage": "https://barcode.so/prompts/0-0.25-0.2-ur-minecraft.png"
+                    }
+                ]
             },
             "title": "Style"
         },
