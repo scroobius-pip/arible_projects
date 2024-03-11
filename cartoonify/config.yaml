@@ -1,0 +1,29 @@
+environment_variables: {}
+external_package_dirs: []
+model_metadata: {}
+model_name: arible-cartoonify
+python_version: py311
+requirements:
+  - diffusers==0.25.1
+  - huggingface_hub==0.20.2
+  - transformers==4.37.1
+  - torch==2.0.0
+  - torchvision==0.15.1
+  - numpy
+  - pillow
+  - opencv-python
+  - accelerate
+  - safetensors
+  - einops
+  - onnxruntime-gpu
+  - insightface
+  - controlnet_aux
+  - peft
+resources:
+  accelerator: A10G
+  cpu: "4"
+  memory: 4Gi
+  use_gpu: true
+secrets: {}
+system_packages:
+  - libgl1
