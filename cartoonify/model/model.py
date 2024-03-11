@@ -72,7 +72,7 @@ class Model:
             controlnet_path, torch_dtype=dtype
         )
 
-        # pretrained_model_name_or_path = "wangqixun/YamerMIX_v8"
+        pretrained_model_name_or_path = "wangqixun/YamerMIX_v8"
         pipe = StableDiffusionXLInstantIDPipeline.from_pretrained(
             pretrained_model_name_or_path,
             torch_dtype=dtype,
