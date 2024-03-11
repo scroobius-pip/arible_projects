@@ -17,7 +17,7 @@ from huggingface_hub import hf_hub_download
 
 from insightface.app import FaceAnalysis
 
-from packages.pipeline_stable_diffusion_xl_instantid_full import (
+from pipeline_stable_diffusion_xl_instantid_full import (
     StableDiffusionXLInstantIDPipeline,
     draw_kps,
 )
