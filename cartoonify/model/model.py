@@ -61,7 +61,7 @@ class Model:
         )
 
         app = FaceAnalysis(
-            name="antelopev2", root="./", providers=["CPUExecutionProvider"]
+            name="buffalo_s", root="./", providers=["CPUExecutionProvider"]
         )
         app.prepare(ctx_id=0, det_size=(640, 640))
 
