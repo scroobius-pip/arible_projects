@@ -54,25 +54,25 @@ class Model:
         # Load model here and assign to self._model.
         # hf_hub_download(repo_id="InstantX/InstantID", filename="ControlNetModel/config.json", local_dir="./checkpoints")
         # hf_hub_download(repo_id="InstantX/InstantID", filename="ControlNetModel/diffusion_pytorch_model.safetensors", local_dir="./checkpoints")
-        hf_hub_download(
-            repo_id="InstantX/InstantID",
-            filename="ip-adapter.bin",
-            local_dir="./checkpoints",
-        )
+        # hf_hub_download(
+        #     repo_id="InstantX/InstantID",
+        #     filename="ip-adapter.bin",
+        #     local_dir="./checkpoints",
+        # )
 
         app = FaceAnalysis(
             name="buffalo_s", root="./", providers=["CPUExecutionProvider"]
         )
         app.prepare(ctx_id=0, det_size=(640, 640))
 
-        face_adapter = f"./checkpoints/ip-adapter.bin"
-        controlnet_path = f"./checkpoints/ControlNetModel"
+        face_adapter = f"./data/ip-adapter.bin"
+        controlnet_path = f"./data/ControlNetModel"
 
         controlnet_identitynet = ControlNetModel.from_pretrained(
             controlnet_path, torch_dtype=dtype
         )
 
-        pretrained_model_name_or_path = "wangqixun/YamerMIX_v8"
+        # pretrained_model_name_or_path = "wangqixun/YamerMIX_v8"
         pipe = StableDiffusionXLInstantIDPipeline.from_pretrained(
             pretrained_model_name_or_path,
             torch_dtype=dtype,

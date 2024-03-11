@@ -27,3 +27,10 @@ resources:
 secrets: {}
 system_packages:
   - libgl1
+external_data:
+  - url: https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/config.json?download=true
+    local_data_path: ControlNetModel/config.json
+  - url: https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true
+    local_data_path: ControlNetModel/diffusion_pytorch_model.safetensors
+  - url: https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin?download=true
+    local_data_path: ip-adapter.bin
