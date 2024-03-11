@@ -33,7 +33,7 @@ from torchvision.transforms import Compose
 MAX_SEED = np.iinfo(np.int32).max
 device = "cuda" if torch.cuda.is_available() else "cpu"
 dtype = torch.float16 if str(device).__contains__("cuda") else torch.float32
-scheduler = "EulerDiscreteScheduler"
+scheduler_string = "EulerDiscreteScheduler"
 guidance_scale = 6.5
 identitynet_strength_ratio = 0.8
 adapter_strength_ratio = 0.8
@@ -51,14 +51,6 @@ class Model:
         self._model = None
 
     def load(self):
-        # Load model here and assign to self._model.
-        # hf_hub_download(repo_id="InstantX/InstantID", filename="ControlNetModel/config.json", local_dir="./checkpoints")
-        # hf_hub_download(repo_id="InstantX/InstantID", filename="ControlNetModel/diffusion_pytorch_model.safetensors", local_dir="./checkpoints")
-        # hf_hub_download(
-        #     repo_id="InstantX/InstantID",
-        #     filename="ip-adapter.bin",
-        #     local_dir="./checkpoints",
-        # )
 
         app = FaceAnalysis(
             name="buffalo_s", root="./", providers=["CPUExecutionProvider"]
@@ -187,7 +179,7 @@ def generate_image(
     app,
     controlnet_identitynet,
 ):
-    scheduler = getattr(diffusers, scheduler)
+    scheduler = getattr(diffusers, scheduler_string)
     pipe.scheduler = scheduler.from_config(pipe.scheduler.config, {})
 
     face_image = load_image(face_image_path)
