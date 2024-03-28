@@ -34,9 +34,9 @@ def download_model(model_url, destination_path):
 
             logging.debug("done writing chunks!")
 
-        logging.info(f"Downloaded file to: {destination_path}")
+        print(f"Downloaded file to: {destination_path}")
     except requests.exceptions.RequestException as e:
-        logging.error(f"Download failed: {e}")
+        print(f"Download failed: {e}")
 
 
 def download_tempfile(file_url, filename):
@@ -95,7 +95,7 @@ def setup_comfyui(original_working_directory, data_dir):
                         destination_path=os.path.join(COMFYUI_DIR, model.get("path")),
                     )
 
-        logging.debug("Finished downloading models!")
+        print("Finished downloading models!")
 
         # run the comfy-ui server
         subprocess.run([sys.executable, "main.py"], cwd=COMFYUI_DIR, check=True)
