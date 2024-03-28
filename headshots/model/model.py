@@ -41,6 +41,7 @@ class Model:
                 ),
             )
             side_process.start()
+            print("ComfyUI process started")
 
         # Load the workflow file as a python dictionary
         with open(

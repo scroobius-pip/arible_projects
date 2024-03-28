@@ -101,6 +101,9 @@ def setup_comfyui(original_working_directory, data_dir):
         subprocess.run([sys.executable, "main.py"], cwd=COMFYUI_DIR, check=True)
 
     except Exception as e:
+        print(
+            f"{type(e).__name__} at line {e.__traceback__.tb_lineno} of {__file__}: {e}"
+        )
         logging.error(e)
         raise Exception("Error setting up comfy UI repo")
 

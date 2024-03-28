@@ -1,5 +1,5 @@
 base_image:
-  image: bolabaseten/comfyui-truss-base:6a7bc35
+  image: sim04ful/ariblecomfyui:main
   python_executable_path: /usr/bin/python3
 environment_variables: {}
 external_package_dirs: []
