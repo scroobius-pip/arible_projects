@@ -58,7 +58,11 @@ class Model:
                 )
                 socket_connected = True
             except Exception as e:
-                print("Could not connect to comfyUI server. Trying again...")
+                print(
+                    f"{type(e).__name__} at line {e.__traceback__.tb_lineno} of {__file__}: {e}"
+                )
+                print("Error connecting to ComfyUI server:", e)
+                # print("Could not connect to comfyUI server. Trying again...")
                 time.sleep(5)
 
         print("Truss has successfully connected to the ComfyUI server!")

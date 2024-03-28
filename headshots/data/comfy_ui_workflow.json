@@ -10,7 +10,7 @@
   },
   "11": {
     "inputs": {
-      "instantid_file": "instantid-ip-adapter.bin"
+      "instantid_file": "ip-adapter.bin"
     },
     "class_type": "InstantIDModelLoader",
     "_meta": {

@@ -1,13 +1,25 @@
+base_image:
+  image: bolabaseten/comfyui-truss-base:6a7bc35
+  python_executable_path: /usr/bin/python3
 environment_variables: {}
 external_package_dirs: []
 model_metadata: {}
 model_name: arible-headshots
-python_version: py311
-requirements: []
+python_version: py39
+requirements:
+  - websocket-client==1.6.4
+  - accelerate==0.23.0
+  - opencv-python
+  - insightface
+  - controlnet_aux
+  - onnxruntime
+  - onnxruntime-gpu
 resources:
-  accelerator: null
-  cpu: "1"
-  memory: 2Gi
+  accelerator: A10G
+  cpu: "3"
+  memory: 8Gi
   use_gpu: true
 secrets: {}
-system_packages: []
+system_packages:
+  - ffmpeg
+  - libgl1-mesa-glx

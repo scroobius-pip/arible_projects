@@ -40,11 +40,11 @@
         "path": "models/checkpoints/realisticStockPhoto_v20.safetensors"
     },
     {
-        "url": "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin?download=true",
-        "path": "models/instantid/instantid-ip-adapter.bin"
+        "url": "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin",
+        "path": "models/instantid/ip-adapter.bin"
     },
     {
-        "url": "https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true",
+        "url": "https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors",
         "path": "models/controlnet/instantid-controlnet.safetensors"
     },
     {
