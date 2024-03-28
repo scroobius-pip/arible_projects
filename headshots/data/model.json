@@ -1,0 +1,74 @@
+[
+    {
+        "url": "https://github.com/scroobius-pip/extended-saveimage-comfyui",
+        "path": "custom_nodes"
+    },
+    {
+        "url": "https://github.com/scroobius-pip/ComfyUI_InstantID",
+        "path": "custom_nodes"
+    },
+    {
+        "url": "https://github.com/scroobius-pip/comfy-plasma",
+        "path": "custom_nodes"
+    },
+    {
+        "url": "https://github.com/scroobius-pip/efficiency-nodes-comfyui",
+        "path": "custom_nodes"
+    },
+    {
+        "url": "https://github.com/scroobius-pip/ComfyUI_essentials",
+        "path": "custom_nodes"
+    },
+    {
+        "url": "https://github.com/scroobius-pip/ComfyUI_FaceAnalysis",
+        "path": "custom_nodes"
+    },
+    {
+        "url": "https://github.com/scroobius-pip/ComfyUI-Inference-Core-Nodes",
+        "path": "custom_nodes"
+    },
+    {
+        "url": "https://github.com/scroobius-pip/ComfyUI-Impact-Pack",
+        "path": "custom_nodes"
+    },
+    {
+        "url": "https://github.com/scroobius-pip/ComfyUI-Crystools",
+        "path": "custom_nodes"
+    },
+    {
+        "url": "https://civitai.com/api/download/models/294470?type=Model&format=SafeTensor&size=pruned&fp=fp16",
+        "path": "models/checkpoints/realisticStockPhoto_v20.safetensors"
+    },
+    {
+        "url": "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin?download=true",
+        "path": "models/instantid/instantid-ip-adapter.bin"
+    },
+    {
+        "url": "https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true",
+        "path": "models/controlnet/instantid-controlnet.safetensors"
+    },
+    {
+        "url": "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/4xFaceUpSharpDAT.pth",
+        "path": "models/upscale_models/4xFaceUpSharpDAT.pth"
+    },
+    {
+        "url": "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/1k3d68.onnx",
+        "path": "models/insightface/models/antelopev2/1k3d68.onnx"
+    },
+    {
+        "url": "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/2d106det.onnx",
+        "path": "models/insightface/models/antelopev2/2d106det.onnx"
+    },
+    {
+        "url": "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/genderage.onnx",
+        "path": "models/insightface/models/antelopev2/genderage.onnx"
+    },
+    {
+        "url": "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/glintr100.onnx",
+        "path": "models/insightface/models/antelopev2/glintr100.onnx"
+    },
+    {
+        "url": "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/scrfd_10g_bnkps.onnx",
+        "path": "models/insightface/models/antelopev2/scrfd_10g_bnkps.onnx"
+    }
+]

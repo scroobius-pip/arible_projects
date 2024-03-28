@@ -1,0 +1,423 @@
+{
+  "4": {
+    "inputs": {
+      "ckpt_name": "realisticStockPhoto_v20.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple",
+    "_meta": {
+      "title": "Load Checkpoint"
+    }
+  },
+  "11": {
+    "inputs": {
+      "instantid_file": "instantid-ip-adapter.bin"
+    },
+    "class_type": "InstantIDModelLoader",
+    "_meta": {
+      "title": "Load InstantID Model"
+    }
+  },
+  "16": {
+    "inputs": {
+      "control_net_name": "instantid-controlnet.safetensors"
+    },
+    "class_type": "ControlNetLoader",
+    "_meta": {
+      "title": "Load ControlNet Model"
+    }
+  },
+  "38": {
+    "inputs": {
+      "provider": "CPU"
+    },
+    "class_type": "InstantIDFaceAnalysis",
+    "_meta": {
+      "title": "InstantID Face Analysis"
+    }
+  },
+  "39": {
+    "inputs": {
+      "text": "{{positive_prompt}}",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "40": {
+    "inputs": {
+      "text": "{{negative_prompt}}",
+      "clip": [
+        "4",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "CLIP Text Encode (Prompt)"
+    }
+  },
+  "161": {
+    "inputs": {
+      "seed": 422767759956876,
+      "steps": 10,
+      "cfg": 3,
+      "sampler_name": "dpmpp_sde",
+      "scheduler": "sgm_uniform",
+      "denoise": 1,
+      "preview_method": "auto",
+      "vae_decode": "true",
+      "model": [
+        "187",
+        0
+      ],
+      "positive": [
+        "187",
+        1
+      ],
+      "negative": [
+        "187",
+        2
+      ],
+      "latent_image": [
+        "167",
+        0
+      ],
+      "optional_vae": [
+        "4",
+        2
+      ],
+      "script": [
+        "164",
+        0
+      ]
+    },
+    "class_type": "KSampler (Efficient)",
+    "_meta": {
+      "title": "KSampler (Efficient)"
+    }
+  },
+  "164": {
+    "inputs": {
+      "upscale_type": "latent",
+      "hires_ckpt_name": "realisticStockPhoto_v20.safetensors",
+      "latent_upscaler": "city96.xl",
+      "pixel_upscaler": "4xFaceUpSharpDAT.pth",
+      "upscale_by": 2,
+      "use_same_seed": true,
+      "seed": -1,
+      "hires_steps": 10,
+      "denoise": 0.8,
+      "iterations": 1,
+      "use_controlnet": false,
+      "control_net_name": "tiled_controlnet.bin",
+      "strength": 1,
+      "preprocessor": "none",
+      "preprocessor_imgs": false
+    },
+    "class_type": "HighRes-Fix Script",
+    "_meta": {
+      "title": "HighRes-Fix Script"
+    }
+  },
+  "167": {
+    "inputs": {
+      "width": 576,
+      "height": 1024,
+      "batch_size": 10
+    },
+    "class_type": "EmptyLatentImage",
+    "_meta": {
+      "title": "Empty Latent Image"
+    }
+  },
+  "173": {
+    "inputs": {
+      "width": [
+        "174",
+        0
+      ],
+      "height": [
+        "174",
+        1
+      ],
+      "value_min": -1,
+      "value_max": -1,
+      "red_min": -1,
+      "red_max": -1,
+      "green_min": -1,
+      "green_max": -1,
+      "blue_min": -1,
+      "blue_max": -1,
+      "seed": 275629020463152
+    },
+    "class_type": "JDC_GreyNoise",
+    "_meta": {
+      "title": "Greyscale Noise"
+    }
+  },
+  "174": {
+    "inputs": {
+      "image": [
+        "196",
+        5
+      ]
+    },
+    "class_type": "GetImageSize+",
+    "_meta": {
+      "title": "🔧 Get Image Size"
+    }
+  },
+  "175": {
+    "inputs": {
+      "blend_factor": 0.25,
+      "blend_mode": "overlay",
+      "image1": [
+        "196",
+        5
+      ],
+      "image2": [
+        "173",
+        0
+      ]
+    },
+    "class_type": "ImageBlend",
+    "_meta": {
+      "title": "ImageBlend"
+    }
+  },
+  "182": {
+    "inputs": {
+      "width": 576,
+      "height": 1024,
+      "interpolation": "nearest",
+      "keep_proportion": true,
+      "condition": "always",
+      "multiple_of": 0,
+      "image": [
+        "212",
+        0
+      ]
+    },
+    "class_type": "ImageResize+",
+    "_meta": {
+      "title": "🔧 Image Resize"
+    }
+  },
+  "187": {
+    "inputs": {
+      "ip_weight": 1,
+      "cn_strength": 1,
+      "start_at": 0,
+      "end_at": 1,
+      "noise": 0.2,
+      "instantid": [
+        "11",
+        0
+      ],
+      "insightface": [
+        "38",
+        0
+      ],
+      "control_net": [
+        "16",
+        0
+      ],
+      "image": [
+        "182",
+        0
+      ],
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "39",
+        0
+      ],
+      "negative": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "ApplyInstantIDAdvanced",
+    "_meta": {
+      "title": "Apply InstantID Advanced"
+    }
+  },
+  "196": {
+    "inputs": {
+      "seed": 794436655916896,
+      "steps": 5,
+      "cfg": 3,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 0.5,
+      "preview_method": "auto",
+      "vae_decode": "true",
+      "model": [
+        "161",
+        0
+      ],
+      "positive": [
+        "161",
+        1
+      ],
+      "negative": [
+        "161",
+        2
+      ],
+      "latent_image": [
+        "161",
+        3
+      ],
+      "optional_vae": [
+        "161",
+        4
+      ],
+      "script": [
+        "197",
+        0
+      ]
+    },
+    "class_type": "KSampler (Efficient)",
+    "_meta": {
+      "title": "KSampler (Efficient)"
+    }
+  },
+  "197": {
+    "inputs": {
+      "upscale_type": "pixel",
+      "hires_ckpt_name": "realisticStockPhoto_v20.safetensors",
+      "latent_upscaler": "city96.xl",
+      "pixel_upscaler": "4xFaceUpSharpDAT.pth",
+      "upscale_by": 2,
+      "use_same_seed": true,
+      "seed": -1,
+      "hires_steps": 5,
+      "denoise": 0.1,
+      "iterations": 1,
+      "use_controlnet": false,
+      "control_net_name": "tiled_controlnet.bin",
+      "strength": 1,
+      "preprocessor": "none",
+      "preprocessor_imgs": false
+    },
+    "class_type": "HighRes-Fix Script",
+    "_meta": {
+      "title": "HighRes-Fix Script"
+    }
+  },
+  "206": {
+    "inputs": {
+      "image": "{{ref_0}}",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "207": {
+    "inputs": {
+      "image": "{{ref_1}}",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "208": {
+    "inputs": {
+      "image": "{{ref_2}}",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "209": {
+    "inputs": {
+      "image": "{{ref_3}}",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "210": {
+    "inputs": {
+      "image": "{{ref_4}}",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "212": {
+    "inputs": {
+      "images": [
+        "213",
+        0
+      ]
+    },
+    "class_type": "ImageListToImageBatch",
+    "_meta": {
+      "title": "Image List to Image Batch"
+    }
+  },
+  "213": {
+    "inputs": {
+      "image1": [
+        "207",
+        0
+      ],
+      "image2": [
+        "206",
+        0
+      ],
+      "image3": [
+        "207",
+        0
+      ],
+      "image4": [
+        "209",
+        0
+      ],
+      "image5": [
+        "210",
+        0
+      ],
+      "image6": [
+        "208",
+        0
+      ]
+    },
+    "class_type": "ImpactMakeImageList",
+    "_meta": {
+      "title": "Make Image List"
+    }
+  },
+  "250": {
+    "inputs": {
+      "filename_prefix": "arible",
+      "file_type": "JPEG",
+      "images": [
+        "175",
+        0
+      ]
+    },
+    "class_type": "SaveImageExtended",
+    "_meta": {
+      "title": "Save Image (Extended)"
+    }
+  }
+}

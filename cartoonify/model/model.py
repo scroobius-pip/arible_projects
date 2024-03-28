@@ -34,10 +34,10 @@ MAX_SEED = np.iinfo(np.int32).max
 device = "cuda" if torch.cuda.is_available() else "cpu"
 dtype = torch.float16 if str(device).__contains__("cuda") else torch.float32
 scheduler_string = "EulerDiscreteScheduler"
-guidance_scale = 6.5
-identitynet_strength_ratio = 0.8
-adapter_strength_ratio = 0.8
-num_steps = 30
+guidance_scale = 3.0
+identitynet_strength_ratio = 1.0
+adapter_strength_ratio = 1.0
+num_steps = 10
 
 
 class Model:
@@ -51,9 +51,9 @@ class Model:
         self._model = None
 
     def load(self):
-
+        # Lykon/dreamshaper-xl-v2-turbo
         app = FaceAnalysis(
-            name="buffalo_s", root="./", providers=["CPUExecutionProvider"]
+            name="antelopev2", root="./", providers=["CPUExecutionProvider"]
         )
         app.prepare(ctx_id=0, det_size=(640, 640))
 
@@ -64,7 +64,7 @@ class Model:
             controlnet_path, torch_dtype=dtype
         )
 
-        pretrained_model_name_or_path = "wangqixun/YamerMIX_v8"
+        pretrained_model_name_or_path = "Lykon/dreamshaper-xl-v2-turbo"
         pipe = StableDiffusionXLInstantIDPipeline.from_pretrained(
             pretrained_model_name_or_path,
             torch_dtype=dtype,
