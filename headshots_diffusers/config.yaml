@@ -22,12 +22,14 @@ requirements:
 resources:
   accelerator: A10G
   cpu: "4"
-  memory: 4Gi
+  memory: 8Gi
   use_gpu: true
 secrets: {}
 system_packages:
   - libgl1
 external_data:
+  - url: "https://civitai.com/api/download/models/294470?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+    local_data_path: realisticStockPhoto_v20.safetensors
   - url: https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/config.json?download=true
     local_data_path: ControlNetModel/config.json
   - url: https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors?download=true

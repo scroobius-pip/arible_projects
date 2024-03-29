@@ -33,7 +33,7 @@ from torchvision.transforms import Compose
 MAX_SEED = np.iinfo(np.int32).max
 device = "cuda" if torch.cuda.is_available() else "cpu"
 dtype = torch.float16 if str(device).__contains__("cuda") else torch.float32
-scheduler_string = "EulerDiscreteScheduler"
+scheduler_string = "DDIMScheduler"
 guidance_scale = 3.0
 identitynet_strength_ratio = 1.0
 adapter_strength_ratio = 1.0
@@ -64,8 +64,8 @@ class Model:
             controlnet_path, torch_dtype=dtype
         )
 
-        pretrained_model_name_or_path = "Lykon/dreamshaper-xl-v2-turbo"
-        pipe = StableDiffusionXLInstantIDPipeline.from_pretrained(
+        pretrained_model_name_or_path = "./data/realisticStockPhoto_v20.safetensors"
+        pipe = StableDiffusionXLInstantIDPipeline.from_single_file(
             pretrained_model_name_or_path,
             torch_dtype=dtype,
             safety_checker=None,
@@ -73,9 +73,7 @@ class Model:
             controlnet=[controlnet_identitynet],
         ).to(device)
 
-        pipe.scheduler = diffusers.EulerDiscreteScheduler.from_config(
-            pipe.scheduler.config
-        )
+        pipe.scheduler = diffusers.DDIMScheduler.from_config(pipe.scheduler.config)
 
         pipe.cuda()
         pipe.load_ip_adapter_instantid(face_adapter)
@@ -238,9 +236,9 @@ def generate_image(
         control_mask=control_mask,
         controlnet_conditioning_scale=control_scales,
         num_inference_steps=num_steps,
-        guidance_scale=guidance_scale,
-        height=height,
-        width=width,
+        guidance_scale=3.0,
+        height=2048,
+        width=1152,
         generator=generator,
     ).images[0]
     return image

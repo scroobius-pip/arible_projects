@@ -24,10 +24,6 @@
         "path": "custom_nodes"
     },
     {
-        "url": "https://github.com/scroobius-pip/ComfyUI-Inference-Core-Nodes",
-        "path": "custom_nodes"
-    },
-    {
         "url": "https://github.com/scroobius-pip/ComfyUI-Impact-Pack",
         "path": "custom_nodes"
     },
