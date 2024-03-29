@@ -239,8 +239,8 @@ def generate_image(
         controlnet_conditioning_scale=control_scales,
         num_inference_steps=num_steps,
         guidance_scale=3.0,
-        height=2048,
-        width=1152,
+        height=1024,
+        width=1024,
         generator=generator,
     ).images[0]
     return image
