@@ -36,3 +36,13 @@ external_data:
     local_data_path: ControlNetModel/diffusion_pytorch_model.safetensors
   - url: https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin?download=true
     local_data_path: ip-adapter.bin
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/1k3d68.onnx"
+    local_data_path: models/insightface/models/antelopev2/1k3d68.onnx
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/2d106det.onnx"
+    local_data_path: models/insightface/models/antelopev2/2d106det.onnx
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/genderage.onnx"
+    local_data_path: models/insightface/models/antelopev2/genderage.onnx
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/glintr100.onnx"
+    local_data_path: models/insightface/models/antelopev2/glintr100.onnx
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/scrfd_10g_bnkps.onnx"
+    local_data_path: models/insightface/models/antelopev2/scrfd_10g_bnkps.onnx
