@@ -23,3 +23,22 @@ secrets: {}
 system_packages:
   - ffmpeg
   - libgl1-mesa-glx
+external_data:
+  - url: "https://civitai.com/api/download/models/294470?type=Model&format=SafeTensor&size=pruned&fp=fp16"
+    local_data_path: /app/ComfyUI/models/checkpoints/realisticStockPhoto_v20.safetensors
+  - url: "https://huggingface.co/InstantX/InstantID/resolve/main/ip-adapter.bin"
+    local_data_path: /app/ComfyUI/models/instantid/ip-adapter.bin
+  - url: "https://huggingface.co/InstantX/InstantID/resolve/main/ControlNetModel/diffusion_pytorch_model.safetensors"
+    local_data_path: /app/ComfyUI/models/controlnet/instantid-controlnet.safetensors
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/4xFaceUpSharpDAT.pth"
+    local_data_path: /app/ComfyUI/models/upscale_models/4xFaceUpSharpDAT.pth
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/1k3d68.onnx"
+    local_data_path: /app/ComfyUI/models/insightface/models/antelopev2/1k3d68.onnx
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/2d106det.onnx"
+    local_data_path: /app/ComfyUI/models/insightface/models/antelopev2/2d106det.onnx
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/genderage.onnx"
+    local_data_path: /app/ComfyUI/models/insightface/models/antelopev2/genderage.onnx
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/glintr100.onnx"
+    local_data_path: /app/ComfyUI/models/insightface/models/antelopev2/glintr100.onnx
+  - url: "https://pub-7bbc6377635e4e588a0a4c5fdfb0df93.r2.dev/scrfd_10g_bnkps.onnx"
+    local_data_path: /app/ComfyUI/models/insightface/models/antelopev2/scrfd_10g_bnkps.onnx
