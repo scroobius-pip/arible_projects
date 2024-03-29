@@ -81,9 +81,9 @@ class Model:
         prompts = model_input["prompts"]
         negative_prompt = model_input["negative_prompt"]
 
-        template_values, tempfiles = convert_image_urls_to_paths(ref_image_urls)
+        ref_image_paths, tempfiles = convert_image_urls_to_paths(ref_image_urls)
         json_workflow = copy.deepcopy(self.json_workflow)
-        template_values = {f"ref_{i}": value for i, value in enumerate(ref_image_urls)}
+        template_values = {f"ref_{i}": value for i, value in enumerate(ref_image_paths)}
         template_values["negative_prompt"] = negative_prompt
 
         results = []
