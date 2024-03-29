@@ -105,7 +105,10 @@ def setup_comfyui(original_working_directory, data_dir):
             f"{type(e).__name__} at line {e.__traceback__.tb_lineno} of {__file__}: {e}"
         )
         logging.error(e)
-        raise Exception("Error setting up comfy UI repo")
+        print("Error setting up comfy UI repo")
+        print("Trying again...")
+        setup_comfyui(original_working_directory, data_dir)
+        # raise Exception("Error setting up comfy UI repo")
 
 
 def queue_prompt(prompt, client_id, server_address):

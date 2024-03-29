@@ -17,6 +17,8 @@ requirements:
   - deepdiff
   - pynvml
   - py-cpuinfo
+  - cuda12
+  - kornia>=0.7.1
 resources:
   accelerator: A10G
   cpu: "3"
@@ -26,6 +28,7 @@ secrets: {}
 system_packages:
   - ffmpeg
   - libgl1-mesa-glx
+  - libglib2.0-0
 external_data:
   - url: "https://civitai.com/api/download/models/294470?type=Model&format=SafeTensor&size=pruned&fp=fp16"
     local_data_path: /app/ComfyUI/models/checkpoints/realisticStockPhoto_v20.safetensors
