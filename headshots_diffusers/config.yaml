@@ -19,6 +19,7 @@ requirements:
   - insightface
   - controlnet_aux
   - peft
+  - omegaconf
 resources:
   accelerator: A10G
   cpu: "4"
