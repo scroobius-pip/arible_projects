@@ -53,7 +53,9 @@ class Model:
     def load(self):
         # Lykon/dreamshaper-xl-v2-turbo
         app = FaceAnalysis(
-            name="antelopev2", root="./data", providers=["CPUExecutionProvider"]
+            name="antelopev2",
+            root="./data/models/insightface",
+            providers=["CPUExecutionProvider"],
         )
         app.prepare(ctx_id=0, det_size=(640, 640))
 
