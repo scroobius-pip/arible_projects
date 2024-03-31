@@ -37,7 +37,7 @@ scheduler_string = "DDIMScheduler"
 guidance_scale = 3.0
 identitynet_strength_ratio = 1.0
 adapter_strength_ratio = 1.0
-num_steps = 10
+num_steps = 20
 
 
 class Model:
@@ -239,8 +239,8 @@ def generate_image(
         controlnet_conditioning_scale=control_scales,
         num_inference_steps=num_steps,
         guidance_scale=3.0,
-        height=1024,
-        width=1024,
+        height=height,
+        width=width,
         generator=generator,
     ).images[0]
     return image
