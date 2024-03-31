@@ -12,7 +12,7 @@ import diffusers
 from diffusers.utils import load_image
 from diffusers.models import ControlNetModel
 from diffusers.pipelines.controlnet.multicontrolnet import MultiControlNetModel
-
+from diffusers import StableDiffusionXLImg2ImgPipeline
 from huggingface_hub import hf_hub_download
 
 from insightface.app import FaceAnalysis
@@ -75,6 +75,10 @@ class Model:
             controlnet=[controlnet_identitynet],
         ).to(device)
 
+        upscale_pipe = StableDiffusionXLImg2ImgPipeline.from_single_file(
+            pretrained_model_name_or_path, torch_dtype=dtype
+        ).to(device)
+
         pipe.scheduler = diffusers.DDIMScheduler.from_config(pipe.scheduler.config)
 
         pipe.cuda()
@@ -83,12 +87,14 @@ class Model:
         pipe.unet.to("cuda")
 
         self._model = pipe
+        self._upscale_model = upscale_pipe
         self._app = app
         self._controlnet_identitynet = controlnet_identitynet
 
     def predict(self, model_input):
         pipe = self._model
         app = self._app
+        upscaler = self._upscale_model
         controlnet_identitynet = self._controlnet_identitynet
         prompts = model_input["prompts"]  # max 10
         face_image_paths = model_input["face_image_paths"]  # max 2
@@ -106,6 +112,7 @@ class Model:
                         negative_prompt,
                         pipe,
                         app,
+                        upscaler,
                         controlnet_identitynet,
                     )
                     image_results.append(
@@ -177,6 +184,7 @@ def generate_image(
     negative_prompt,
     pipe,
     app,
+    upscaler,
     controlnet_identitynet,
 ):
     scheduler = getattr(diffusers, scheduler_string)
@@ -243,4 +251,14 @@ def generate_image(
         width=width,
         generator=generator,
     ).images[0]
+    # return image
+    upscaled_image = upscaler(
+        prompt=prompt,
+        negative_prompt=negative_prompt,
+        image=image,
+        strength=0.8,
+        num_inference_steps=20,
+        target_size=(height * 2, width * 2),
+    ).images[0]
+
     return image
