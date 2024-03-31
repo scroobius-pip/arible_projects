@@ -261,4 +261,4 @@ def generate_image(
         target_size=(height * 2, width * 2),
     ).images[0]
 
-    return image
+    return upscaled_image
