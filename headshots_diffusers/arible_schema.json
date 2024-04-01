@@ -20,48 +20,23 @@
             "title": "Styles"
         },
         {
-            "name": "face_image_paths",
+            "name": "ref_image_urls",
             "type": "file",
             "mimeTypes": [
                 "image/jpeg",
                 "image/png"
             ],
-            "description": "Upload atleast one close-up image of your face",
+            "description": "Upload five close-up images of your face",
             "options": {
-                "min": 1,
-                "max": 2
+                "min": 5,
+                "max": 5
             },
             "title": "Photos of your face"
         },
         {
-            "name": "pose_image_paths",
-            "type": "text",
-            "description": "Select atleast one image of any image you would like to copy its pose",
-            "options": {
-                "min": 1,
-                "max": 2,
-                "items": [
-                    {
-                        "title": "Looking away right",
-                        "description": "",
-                        "value": "https://i.pinimg.com/564x/b9/58/15/b95815e8fe44c2a2d25d118bfe4a68fe.jpg",
-                        "previewImage": "https://i.pinimg.com/564x/b9/58/15/b95815e8fe44c2a2d25d118bfe4a68fe.jpg"
-                    },
-                    {
-                        "title": "Looking at camera",
-                        "description": "",
-                        "value": "https://i.pinimg.com/564x/03/43/40/034340601a95cb4882e2a507eaffa0ff.jpg",
-                        "previewImage": "https://i.pinimg.com/564x/03/43/40/034340601a95cb4882e2a507eaffa0ff.jpg"
-                    },
-                    {
-                        "title": "Looking at camera left",
-                        "description": "",
-                        "value": "https://i.pinimg.com/564x/94/b7/38/94b7380000ee7deccf80fcbe31a92f29.jpg",
-                        "previewImage": "https://i.pinimg.com/564x/94/b7/38/94b7380000ee7deccf80fcbe31a92f29.jpg"
-                    }
-                ]
-            },
-            "title": "Select a pose"
+            "name": "negative_prompt",
+            "type": "constant",
+            "value": "(lowres, low quality, worst quality:1.2), (text:1.2), watermark, deformed, mutated, cross-eyed, ugly, disfigured (lowres, low quality, worst quality:1.2), (text:1.2), watermark, glitch,deformed, mutated, cross-eyed, ugly, disfigured"
         }
     ]
 }
