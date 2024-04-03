@@ -90,7 +90,7 @@ class Model:
         for prompt in prompts:
             template_values["positive_prompt"] = prompt
             json_workflow = fill_template(json_workflow, template_values)
-            print(json_workflow)
+         
             try:
                 outputs = get_images(
                     self.ws, json_workflow, self.client_id, self.server_address

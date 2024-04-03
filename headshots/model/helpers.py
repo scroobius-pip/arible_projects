@@ -138,7 +138,7 @@ def get_history(prompt_id, server_address):
 
 def get_images(ws, prompt, client_id, server_address):
     prompt_id = queue_prompt(prompt, client_id, server_address)["prompt_id"]
-    logging.info(f"prompt id:  {prompt_id}")
+
     output_images = {}
     while True:
         out = ws.recv()
@@ -168,15 +168,16 @@ def get_images(ws, prompt, client_id, server_address):
             for image in node_output["images"]:
                 # Image Preview Nodes don't get saved, so this is how to extract the data from previews
                 if image.get("type") == "temp":
-                    image_data = get_image(
-                        image["filename"],
-                        image["subfolder"],
-                        image["type"],
-                        server_address,
-                    )
-                    outputs.append(
-                        {"filename": image.get("filename"), "data": image_data}
-                    )
+                    # image_data = get_image(
+                    #     image["filename"],
+                    #     image["subfolder"],
+                    #     image["type"],
+                    #     server_address,
+                    # )
+                    # outputs.append(
+                    #     {"filename": image.get("filename"), "data": image_data}
+                    # )
+                    pass
                 else:
                     print("saved image: ", image)
                     print("image type: ", image.get("type"))
