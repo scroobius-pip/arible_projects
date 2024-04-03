@@ -63,7 +63,7 @@
   },
   "161": {
     "inputs": {
-      "seed": 422767759956876,
+      "seed": "{{seed}}",
       "steps": 10,
       "cfg": 3,
       "sampler_name": "dpmpp_sde",
@@ -109,7 +109,7 @@
       "pixel_upscaler": "4xFaceUpSharpDAT.pth",
       "upscale_by": 2,
       "use_same_seed": true,
-      "seed": -1,
+      "seed": "{{seed}}",
       "hires_steps": 10,
       "denoise": 0.8,
       "iterations": 1,
@@ -251,7 +251,7 @@
   },
   "196": {
     "inputs": {
-      "seed": 794436655916896,
+      "seed": "{{seed}}",
       "steps": 5,
       "cfg": 3,
       "sampler_name": "dpmpp_2m",
@@ -297,7 +297,7 @@
       "pixel_upscaler": "4xFaceUpSharpDAT.pth",
       "upscale_by": 2,
       "use_same_seed": true,
-      "seed": -1,
+      "seed": "{{seed}}",
       "hires_steps": 5,
       "denoise": 0.1,
       "iterations": 1,

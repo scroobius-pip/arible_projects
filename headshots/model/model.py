@@ -78,19 +78,21 @@ class Model:
 
         random.shuffle(ref_image_urls)
 
-        prompts = model_input["prompts"]
+        prompts = model_input["prompts"] * 2
+
         negative_prompt = model_input["negative_prompt"]
 
         ref_image_paths, tempfiles = convert_image_urls_to_paths(ref_image_urls)
         json_workflow = copy.deepcopy(self.json_workflow)
         template_values = {f"ref_{i}": value for i, value in enumerate(ref_image_paths)}
         template_values["negative_prompt"] = negative_prompt
+        template_values["seed"] = random.randint(0, 10000)
 
         results = []
         for prompt in prompts:
             template_values["positive_prompt"] = prompt
             json_workflow = fill_template(json_workflow, template_values)
-         
+
             try:
                 outputs = get_images(
                     self.ws, json_workflow, self.client_id, self.server_address
