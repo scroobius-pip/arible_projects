@@ -86,11 +86,11 @@ class Model:
         json_workflow = copy.deepcopy(self.json_workflow)
         template_values = {f"ref_{i}": value for i, value in enumerate(ref_image_paths)}
         template_values["negative_prompt"] = negative_prompt
-        template_values["seed"] = random.randint(0, 10000)
 
         results = []
         for prompt in prompts:
             template_values["positive_prompt"] = prompt
+            template_values["seed"] = random.randint(0, 10000)
             json_workflow = fill_template(json_workflow, template_values)
 
             try:
