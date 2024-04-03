@@ -92,7 +92,6 @@ class Model:
             template_values["positive_prompt"] = prompt
             template_values["seed"] = random.randint(0, 10000)
             json_workflow = fill_template(json_workflow, template_values)
-
             try:
                 outputs = get_images(
                     self.ws, json_workflow, self.client_id, self.server_address
