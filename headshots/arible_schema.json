@@ -4,21 +4,14 @@
     "inputs": [
         {
             "name": "prompts",
-            "type": "text",
-            "description": "Select style",
-            "options": {
-                "min": 1,
-                "max": 10,
-                "items": [
-                    {
-                        "title": "Pro Headshot",
-                        "value": "Professional studio headshot of person, corporate outfit key light and fill light creating a balanced exposure. Clean, grey background, 50mm lens for a natural look, confident stance with arms crossed, looking directly at the camera.",
-                        "description": "pro_headshot",
-                        "previewImage": "https://s.arible.co/u6uI6ItLsGpvNxckOKQc9T.jpeg"
-                    }
-                ]
-            },
-            "title": "Styles"
+            "type": "constant",
+            "value": [
+                "Professional studio headshot of person, corporate outfit key light and fill light creating a balanced exposure. Clean, grey background, 50mm lens for a natural look, confident stance with arms crossed, looking directly at the camera.",
+                "headshot photo of person, by Jason A. Engle, a stock photo, behance, greg ruthkowski, scott wills, craig mullin, brent hollowell, scott roberston",
+                "photo of a person, author zima blue, headshot portrait, headshot photo, professional photo, medium portrait, outdoors business portrait, close-up professional portrait, professional headshot, monica langlois, editorial portrait, headshot photograph, wearing medium - sized glasses, high detail portrait photo, Adrienn Henczné Deák",
+                "photo of person, portrait, professional photo, professional headshot, professional profile photo, headshot photo, Nicolette Macnamara, smiling young woman, Mia Brownell, kailee mandel, professional profile picture, professional portrait photo, Olivia Peguero, Siona Shimshi, detailed professional photo, headshot photograph, rebecca oborn",
+                "person in a yellow shirt is smiling and looking at the camera, Max Dauthendey, a character portrait, trending on tumblr, wearing a shirt laughing, yellow clothes, smiling person, in front of an orange background, smiling person, rex orange county, wearing polo shirt"
+            ]
         },
         {
             "name": "ref_image_urls",

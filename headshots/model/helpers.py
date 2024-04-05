@@ -151,7 +151,6 @@ def get_images(ws, prompt, client_id, server_address):
         else:
             continue  # previews are binary data
 
-    # history = get_history(prompt_id, server_address)[prompt_id]
     history = get_history(prompt_id, server_address)
     for node_id in history:
         node_output = history[node_id]
@@ -179,8 +178,6 @@ def get_images(ws, prompt, client_id, server_address):
                     # )
                     pass
                 else:
-                    print("saved image: ", image)
-                    print("image type: ", image.get("type"))
                     # When the image gets saved
                     outputs.append({"filename": image.get("filename")})
             if not output_images.get(node_id):
@@ -285,6 +282,7 @@ def convert_outputs_to_base64(node_id, file_name, file_data=None):
             return {"data": pil_to_b64(image), "format": file_type}
     else:
         image = Image.open(io.BytesIO(file_data))
+
         b64_img = pil_to_b64(image)
         return {"data": b64_img, "format": "png"}
 
@@ -310,6 +308,6 @@ def b64_to_pil(b64_str):
 
 def pil_to_b64(pil_img):
     buffered = BytesIO()
-    pil_img.save(buffered, format="PNG")
+    pil_img.save(buffered, format="JPEG", optimize=True, quality="web_very_high")
     img_str = base64.b64encode(buffered.getvalue()).decode("utf-8")
     return img_str
