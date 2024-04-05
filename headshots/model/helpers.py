@@ -284,7 +284,7 @@ def convert_outputs_to_base64(node_id, file_name, file_data=None):
         image = Image.open(io.BytesIO(file_data))
 
         b64_img = pil_to_b64(image)
-        return {"data": b64_img, "format": "png"}
+        return {"data": b64_img, "format": "jpeg"}
 
 
 def gif_to_base64(file_path):
