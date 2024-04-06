@@ -89,14 +89,15 @@ class Model:
 
         results = []
         for prompt in prompts:
+            temp_json_workflow = copy.deepcopy(json_workflow)
             seed = random.randint(0, 10000)
             template_values["positive_prompt"] = prompt
             template_values["seed"] = seed
             template_values["file_prefix"] = seed
-            json_workflow = fill_template(json_workflow, template_values)
+            temp_json_workflow = fill_template(temp_json_workflow, template_values)
             try:
                 outputs = get_images(
-                    self.ws, json_workflow, self.client_id, self.server_address
+                    self.ws, temp_json_workflow, self.client_id, self.server_address
                 )
                 for node_id in outputs:
                     for item in outputs[node_id]:
@@ -115,3 +116,11 @@ class Model:
             file.close()
 
         return results
+
+
+# [
+#     "Professional studio headshot of person, corporate outfit key light and fill light creating a balanced exposure. Clean, grey background, 50mm lens for a natural look, confident stance with arms crossed, looking directly at the camera.",
+#     "headshot photo of person, by Jason A. Engle, a stock photo, behance, greg ruthkowski, scott wills, craig mullin, brent hollowell, scott roberston",
+#     "Professional studio headshot of person, corporate outfit key light and fill light creating a balanced exposure. Clean, grey background, 50mm lens for a natural look, confident stance with arms crossed, looking directly at the camera.",
+#     "headshot photo of person, by Jason A. Engle, a stock photo, behance, greg ruthkowski, scott wills, craig mullin, brent hollowell, scott roberston",
+# ]
