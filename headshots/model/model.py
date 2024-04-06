@@ -77,8 +77,8 @@ class Model:
                 ref_image_urls.append(ref_image_urls[0])
 
         random.shuffle(ref_image_urls)
-        print(f"prompts: {prompts}")
         prompts = model_input["prompts"] * 2
+        print(f"prompts: {prompts}")
 
         negative_prompt = model_input["negative_prompt"]
 
