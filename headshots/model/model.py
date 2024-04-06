@@ -77,7 +77,7 @@ class Model:
                 ref_image_urls.append(ref_image_urls[0])
 
         random.shuffle(ref_image_urls)
-
+        print(f"prompts: {prompts}")
         prompts = model_input["prompts"] * 2
 
         negative_prompt = model_input["negative_prompt"]
@@ -102,6 +102,7 @@ class Model:
                     for item in outputs[node_id]:
                         file_name = item.get("filename")
                         file_data = item.get("data")
+                        print(f"file_name: {file_name}")
                         output = convert_outputs_to_base64(
                             node_id=node_id, file_name=file_name, file_data=file_data
                         )
