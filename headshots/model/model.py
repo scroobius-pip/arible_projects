@@ -90,7 +90,7 @@ class Model:
         results = []
         for prompt in prompts:
             temp_json_workflow = copy.deepcopy(json_workflow)
-            seed = random.randint(0, 10000)
+            seed = random.randint(0, 10000000)
             template_values["positive_prompt"] = prompt
             template_values["seed"] = seed
             template_values["file_prefix"] = seed
@@ -112,9 +112,10 @@ class Model:
             except Exception as e:
                 print("Error occurred while running Comfy workflow: ", e)
 
-        for file in tempfiles:
-            file.close()
+        # for file in tempfiles:
+        #     file.close()
 
+        print(f"Finished running Comfy workflow with {len(results)} results")
         return results
 
 
