@@ -408,7 +408,7 @@
   },
   "250": {
     "inputs": {
-      "filename_prefix": "arible",
+      "filename_prefix": "{{file_prefix}}",
       "file_type": "JPEG",
       "images": [
         "175",

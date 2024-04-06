@@ -89,8 +89,10 @@ class Model:
 
         results = []
         for prompt in prompts:
+            seed = random.randint(0, 10000)
             template_values["positive_prompt"] = prompt
-            template_values["seed"] = random.randint(0, 10000)
+            template_values["seed"] = seed
+            template_values["file_prefix"] = seed
             json_workflow = fill_template(json_workflow, template_values)
             try:
                 outputs = get_images(
