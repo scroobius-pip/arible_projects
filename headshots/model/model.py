@@ -24,7 +24,7 @@ def add_ref_images_template(count, json_workflow):
     start_index = 400
     for i in range(count):
         json_workflow[str(start_index + i)] = {
-            "inputs": {"image": "{{ref_" + i + "}}", "upload": "image"},
+            "inputs": {"image": "{{ref_" + str(i) + "}}", "upload": "image"},
             "class_type": "LoadImage",
             "_meta": {"title": "Load Image"},
         }
