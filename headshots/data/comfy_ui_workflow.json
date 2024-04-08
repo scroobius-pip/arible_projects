@@ -312,56 +312,6 @@
       "title": "HighRes-Fix Script"
     }
   },
-  "206": {
-    "inputs": {
-      "image": "{{ref_0}}",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "207": {
-    "inputs": {
-      "image": "{{ref_1}}",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "208": {
-    "inputs": {
-      "image": "{{ref_2}}",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "209": {
-    "inputs": {
-      "image": "{{ref_3}}",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
-  "210": {
-    "inputs": {
-      "image": "{{ref_4}}",
-      "upload": "image"
-    },
-    "class_type": "LoadImage",
-    "_meta": {
-      "title": "Load Image"
-    }
-  },
   "212": {
     "inputs": {
       "images": [
@@ -375,32 +325,7 @@
     }
   },
   "213": {
-    "inputs": {
-      "image1": [
-        "207",
-        0
-      ],
-      "image2": [
-        "206",
-        0
-      ],
-      "image3": [
-        "207",
-        0
-      ],
-      "image4": [
-        "209",
-        0
-      ],
-      "image5": [
-        "210",
-        0
-      ],
-      "image6": [
-        "208",
-        0
-      ]
-    },
+    "inputs": {},
     "class_type": "ImpactMakeImageList",
     "_meta": {
       "title": "Make Image List"

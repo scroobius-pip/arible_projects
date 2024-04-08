@@ -20,6 +20,17 @@ side_process = None
 original_working_directory = os.getcwd()
 
 
+def add_ref_images_template(count, json_workflow):
+    start_index = 400
+    for i in range(count):
+        json_workflow[str(start_index + i)] = {
+            "inputs": {"image": "{{ref_" + i + "}}", "upload": "image"},
+            "class_type": "LoadImage",
+            "_meta": {"title": "Load Image"},
+        }
+        json_workflow["213"]["inputs"][f"image{i+1}"] = [str(start_index + i), 0]
+
+
 class Model:
     def __init__(self, **kwargs):
         self._data_dir = kwargs["data_dir"]
@@ -71,17 +82,10 @@ class Model:
     def predict(self, model_input: Dict) -> Dict:
 
         ref_image_urls = model_input["ref_image_urls"]
-        if len(ref_image_urls) < 5:
-            remaining = 5 - len(ref_image_urls)
-            for i in range(remaining):
-                ref_image_urls.append(ref_image_urls[0])
+        add_ref_images_template(len(ref_image_urls), self.json_workflow)
 
-        random.shuffle(ref_image_urls)
         prompts = model_input["prompts"] * 1
-        print(f"prompts: {prompts}")
-
         negative_prompt = model_input["negative_prompt"]
-
         ref_image_paths, tempfiles = convert_image_urls_to_paths(ref_image_urls)
         json_workflow = copy.deepcopy(self.json_workflow)
         template_values = {f"ref_{i}": value for i, value in enumerate(ref_image_paths)}
