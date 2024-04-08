@@ -83,6 +83,7 @@ class Model:
 
         ref_image_urls = model_input["ref_image_urls"]
         if isinstance(ref_image_urls, str):
+            print("ref_image_urls is a string")
             ref_image_urls = [ref_image_urls]
 
         add_ref_images_template(len(ref_image_urls), self.json_workflow)
