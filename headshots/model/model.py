@@ -82,6 +82,9 @@ class Model:
     def predict(self, model_input: Dict) -> Dict:
 
         ref_image_urls = model_input["ref_image_urls"]
+        if isinstance(ref_image_urls, str):
+            ref_image_urls = [ref_image_urls]
+
         add_ref_images_template(len(ref_image_urls), self.json_workflow)
 
         prompts = model_input["prompts"] * 1
