@@ -85,8 +85,10 @@ class Model:
 
         ref_image_urls = model_input["ref_image_urls"]
         if isinstance(ref_image_urls, str):
-            print("ref_image_urls is a string")
             ref_image_urls = [ref_image_urls]
+
+        if len(ref_image_urls) < 2:
+            ref_image_urls *= 2
 
         prompts = model_input["prompts"] * 1
         negative_prompt = model_input["negative_prompt"]
@@ -103,9 +105,9 @@ class Model:
             template_values["positive_prompt"] = prompt
             template_values["seed"] = seed
             template_values["file_prefix"] = seed
-            print(f"before fill template: {temp_json_workflow}")
+
             temp_json_workflow = fill_template(temp_json_workflow, template_values)
-            print(f"after fill template: {temp_json_workflow}")
+
             try:
                 outputs = get_images(
                     self.ws, temp_json_workflow, self.client_id, self.server_address
