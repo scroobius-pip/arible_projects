@@ -174,7 +174,7 @@
   },
   "175": {
     "inputs": {
-      "blend_factor": 0.15,
+      "blend_factor": 0.25,
       "blend_mode": "overlay",
       "image1": [
         "196",
