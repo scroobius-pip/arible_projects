@@ -19,7 +19,7 @@
                     },
                     {
                         "title": "B&W Photo",
-                        "value": "a black and white photo of person wearing a coat, trending on instagram, sleek white",
+                        "value": "a black and white photo of person wearing a coat, trending on instagram, sleek white coat. posed against a stark, minimalist backdrop for a high-fashion editorial feel",
                         "description": "B&W Photo",
                         "previewImage": "https://s.arible.co/delete_fvJvZJnRfwoB4QXmmuaz0n.jpeg"
                     },
@@ -61,7 +61,7 @@
         {
             "name": "negative_prompt",
             "type": "constant",
-            "value": "(lowres, low quality, worst quality:1.2), (text:1.2), watermark, deformed, mutated, cross-eyed, ugly, disfigured (lowres, low quality, worst quality:1.2), (text:1.2), watermark, glitch,deformed, mutated, cross-eyed, ugly, disfigured"
+            "value": "old face, elderly, long face, long neck, (lowres, low quality, worst quality:1.2), (text:1.2), watermark, deformed, mutated, cross-eyed, ugly, disfigured (lowres, low quality, worst quality:1.2), (text:1.2), watermark, glitch,deformed, mutated, cross-eyed, ugly, disfigured"
         }
     ]
 }
