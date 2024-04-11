@@ -130,22 +130,5 @@ class Model:
         #     file.close()
 
         print(f"Finished running Comfy workflow with {len(results)} results")
-        upload_url = model_input["upload_url"]
-        upload_results(results, upload_url)
-        # return results
 
-
-def upload_results(results, upload_url):
-    try:
-        requests.put(upload_url, data=json.dumps(results))
-        print("Results uploaded successfully")
-    except Exception as e:
-        print("Error uploading results: ", e)
-
-
-# [
-#     "Professional studio headshot of person, corporate outfit key light and fill light creating a balanced exposure. Clean, grey background, 50mm lens for a natural look, confident stance with arms crossed, looking directly at the camera.",
-#     "headshot photo of person, by Jason A. Engle, a stock photo, behance, greg ruthkowski, scott wills, craig mullin, brent hollowell, scott roberston",
-#     "Professional studio headshot of person, corporate outfit key light and fill light creating a balanced exposure. Clean, grey background, 50mm lens for a natural look, confident stance with arms crossed, looking directly at the camera.",
-#     "headshot photo of person, by Jason A. Engle, a stock photo, behance, greg ruthkowski, scott wills, craig mullin, brent hollowell, scott roberston",
-# ]
+        return results
