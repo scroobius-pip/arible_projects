@@ -137,7 +137,8 @@ class Model:
 
 def upload_results(results, upload_url):
     try:
-        requests.put(upload_url, json=results)
+        requests.put(upload_url, data=json.dumps(results))
+        print("Results uploaded successfully")
     except Exception as e:
         print("Error uploading results: ", e)
 
