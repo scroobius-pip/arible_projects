@@ -15,6 +15,7 @@ from model.helpers import (
     get_images,
     setup_comfyui,
 )
+import requests
 
 side_process = None
 original_working_directory = os.getcwd()
@@ -129,7 +130,16 @@ class Model:
         #     file.close()
 
         print(f"Finished running Comfy workflow with {len(results)} results")
-        return results
+        upload_url = model_input["upload_url"]
+        upload_results(results, upload_url)
+        # return results
+
+
+def upload_results(results, upload_url):
+    try:
+        requests.put(upload_url, json=results)
+    except Exception as e:
+        print("Error uploading results: ", e)
 
 
 # [
