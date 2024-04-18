@@ -21,10 +21,10 @@ This task is powered by the Arible platform, and all personal uploads on the pla
 This happens from time to time, albeit rarely, one way to fix it is to retry using a different photo or uploading more photos of yourself. Contact simdi@arible.co for a credit refund.
 
 ## Showcase!
-[Uploading arible_0 (9).jpg…]()
+
 ![arible_0 (4)](https://github.com/scroobius-pip/arible_projects/assets/11554364/7524f665-d06c-4df3-955c-534dc9b83413)
 ![WhatsApp Image 2024-04-18 at 3 26 55 PM](https://github.com/scroobius-pip/arible_projects/assets/11554364/1ebedbdf-e016-4a1d-a723-175b0b887af7)
 ![WhatsApp Image 2024-04-18 at 4 34 04 PM](https://github.com/scroobius-pip/arible_projects/assets/1155436![Uploading {{file_prefix}}_00044_.jpg![arible_0 (2)](https://github.com/scroobius-pip/arible_projects/assets/11554364/03da4b47-d2d5-487e-bf15-4d3283e8f085)
-…]()
-4/881e0829-84c5-46a9-aac4-45e788ef4cd3)
+
 ![WhatsApp Image 2024-04-18 at 10 31 57 PM](https://github.com/scroobius-pip/arible_projects/assets/11554364/589cf3c4-b3b9-447f-8e67-659e9ed1a5a6)
+![arible_0_1713478057](https://github.com/scroobius-pip/arible_projects/assets/11554364/5879aaf3-0075-47f3-8424-4e4723e52bac)
