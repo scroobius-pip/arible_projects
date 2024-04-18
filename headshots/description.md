@@ -28,3 +28,5 @@ This happens from time to time, albeit rarely, one way to fix it is to retry usi
 
 ![WhatsApp Image 2024-04-18 at 10 31 57 PM](https://github.com/scroobius-pip/arible_projects/assets/11554364/589cf3c4-b3b9-447f-8e67-659e9ed1a5a6)
 ![arible_0_1713478057](https://github.com/scroobius-pip/arible_projects/assets/11554364/5879aaf3-0075-47f3-8424-4e4723e52bac)
+![WhatsApp Image 2024-04-18 at 4 34 04 PM](https://github.com/scroobius-pip/arible_projects/assets/11554364/a5ca5983-48b3-44f8-8ac6-54e7c6a906f3)
+![WhatsApp Image 2024-04-18 at 3 26 44 PM](https://github.com/scroobius-pip/arible_projects/assets/11554364/3f772b90-c547-4bfc-8303-69e464f40b4e)
