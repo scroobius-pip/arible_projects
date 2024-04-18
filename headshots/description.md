@@ -1,4 +1,4 @@
-![arible_0 (9)](https://github.com/scroobius-pip/arible_projects/assets/11554364/c61694de-46c8-414e-a987-237aca0209d1)This tool gives you a single high quality 4k portrait that looks like you, while needing only a single existing photo.
+![{{file_prefix}}_00044_](https://github.com/scroobius-pip/arible_projects/assets/11554364/665a55dd-ba70-4dc7-bf87-0d7bff11f7f4)![arible_0 (9)](https://github.com/scroobius-pip/arible_projects/assets/11554364/c61694de-46c8-414e-a987-237aca0209d1)This tool gives you a single high quality 4k portrait that looks like you, while needing only a single existing photo.
 
 ## Instructions:
 - Select a style
@@ -23,3 +23,8 @@ This happens from time to time, albeit rarely, one way to fix it is to retry usi
 ## Showcase!
 [Uploading arible_0 (9).jpg…]()
 ![arible_0 (4)](https://github.com/scroobius-pip/arible_projects/assets/11554364/7524f665-d06c-4df3-955c-534dc9b83413)
+![WhatsApp Image 2024-04-18 at 3 26 55 PM](https://github.com/scroobius-pip/arible_projects/assets/11554364/1ebedbdf-e016-4a1d-a723-175b0b887af7)
+![WhatsApp Image 2024-04-18 at 4 34 04 PM](https://github.com/scroobius-pip/arible_projects/assets/1155436![Uploading {{file_prefix}}_00044_.jpg![arible_0 (2)](https://github.com/scroobius-pip/arible_projects/assets/11554364/03da4b47-d2d5-487e-bf15-4d3283e8f085)
+…]()
+4/881e0829-84c5-46a9-aac4-45e788ef4cd3)
+![WhatsApp Image 2024-04-18 at 10 31 57 PM](https://github.com/scroobius-pip/arible_projects/assets/11554364/589cf3c4-b3b9-447f-8e67-659e9ed1a5a6)
