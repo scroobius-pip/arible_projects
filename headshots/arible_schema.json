@@ -1,1 +1,67 @@
-{"title":"Headshots","description":"Create Headshot of Yourself","inputs":[{"name":"prompts","type":"text","description":"Select a style for the headshot","title":"Style","options":{"max":1,"min":1,"items":[{"title":"Studio Headshot","value":"Professional studio headshot of person, corporate outfit key light and fill light creating a balanced exposure. Clean, grey background, 50mm lens for a natural look, confident stance with arms crossed, looking directly at the camera.","description":"Studio Headshot","previewImage":"https://s.arible.co/delete_fvJvZJnRfwoB4QXmmuaz4w.jpg"},{"title":"B&W Photo","value":"a black and white photo of person wearing a sleek white balenciaga coat, trending on instagram. posed against a stark, minimalist backdrop for a high-fashion editorial feel","description":"B&W Photo","previewImage":"https://s.arible.co/delete_fvJvZJnRfwoB4QXmmuaz0n.jpeg"},{"title":"Turtleneck","value":"turned slightly left, detailed threads black turtleneck top, Poised and confident demeanor. Hotel Lobby outdoor settings.","description":"Turtleneck","previewImage":"https://s.arible.co/delete_fvJvZJnRfwoB4QXmmuaybv.jpg"},{"title":"Polaroid","value":"high-quality photo portrait, shot on a Polaroid camera","description":"Polaroid","previewImage":"https://s.arible.co/delete_fvJvZJnRfwoB4QXmmuaykD.png"},{"title":"Yellow","value":"character portrait, laughing, yellow clothes, smiling person, in front of an orange background","description":"Yellow","previewImage":"https://s.arible.co/delete_fvJvZJnRfwoB4QXmmuayg4.png"}]}},{"name":"ref_image_urls","type":"file","mimeTypes":["image/jpeg","image/png"],"description":"Upload a few close-up photos of your face","options":{"min":1,"max":15},"title":"Photos of your face"},{"name":"negative_prompt","type":"constant","value":"old face, elderly, long face, long neck, (lowres, low quality, worst quality:1.2), (text:1.2), watermark, deformed, mutated, cross-eyed, ugly, disfigured (lowres, low quality, worst quality:1.2), (text:1.2), watermark, glitch,deformed, mutated, cross-eyed, ugly, disfigured"}]}
+{
+    "title": "Headshots",
+    "description": "Arible AI Pro Portraits",
+    "inputs": [
+        {
+            "name": "prompts",
+            "type": "text",
+            "description": "Select two styles",
+            "title": "Style",
+            "options": {
+                "max": 2,
+                "min": 1,
+                "items": [
+                    {
+                        "title": "Studio Headshot",
+                        "value": "Professional studio headshot of person, corporate outfit key light and fill light creating a balanced exposure. Clean, grey background, 50mm lens for a natural look, confident stance with arms crossed, looking directly at the camera.",
+                        "description": "Studio Headshot",
+                        "previewImage": "https://pub-93685b189ac24b30839990a7d9a14391.r2.dev/323773762-1ebedbdf-e016-4a1d-a723-175b0b887af7.jpeg"
+                    },
+                    {
+                        "title": "B&W Photo",
+                        "value": "a black and white photo of person wearing a sleek white balenciaga coat, trending on instagram. posed against a stark, minimalist backdrop for a high-fashion editorial feel",
+                        "description": "B&W Photo",
+                        "previewImage": "https://pub-93685b189ac24b30839990a7d9a14391.r2.dev/323777219-3f772b90-c547-4bfc-8303-69e464f40b4e.jpeg"
+                    },
+                    {
+                        "title": "Polaroid",
+                        "value": "polaroid photo of person ",
+                        "description": "Polaroid",
+                        "previewImage": "https://pub-93685b189ac24b30839990a7d9a14391.r2.dev/4e7b81cf-f41f-44c5-a2cb-d3a64914dc04.jpeg"
+                    },
+                    {
+                        "title": "Turtleneck",
+                        "value": "silicon valley photo of person, detailed threads black turtleneck top, Poised and confident demeanor. in front of flat color background.",
+                        "description": "Turtleneck",
+                        "previewImage": "https://pub-93685b189ac24b30839990a7d9a14391.r2.dev/download%20(4).jpeg"
+                    },
+                    {
+                        "title": "Yellow",
+                        "value": "character portrait, laughing, yellow clothes, smiling person, in front of an orange background",
+                        "description": "Yellow",
+                        "previewImage": "https://pub-93685b189ac24b30839990a7d9a14391.r2.dev/323776580-5879aaf3-0075-47f3-8424-4e4723e52bac.jpg"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "ref_image_urls",
+            "type": "file",
+            "mimeTypes": [
+                "image/jpeg",
+                "image/png"
+            ],
+            "description": "Upload a few close-up photos of your face",
+            "options": {
+                "min": 1,
+                "max": 15
+            },
+            "title": "Photos of your face"
+        },
+        {
+            "name": "negative_prompt",
+            "type": "constant",
+            "value": "old face, elderly, long face, long neck, (lowres, low quality, worst quality:1.2), (text:1.2), watermark, deformed, mutated, cross-eyed, ugly, disfigured (lowres, low quality, worst quality:1.2), (text:1.2), watermark, glitch,deformed, mutated, cross-eyed, ugly, disfigured"
+        }
+    ]
+}
